@@ -4,5 +4,6 @@ function patternTest() {
 
     var outString = inputText.repeat(repetition);
 
+    document.getElementById("success-alert").innerHTML = "Output:";
     document.getElementById("output").innerHTML = outString;
 }
