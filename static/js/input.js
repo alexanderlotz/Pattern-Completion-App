@@ -8,11 +8,8 @@ function addInput() {
     }
 
     document.getElementById("pattern").value = "";
-
     INPUTS.push(inputText);
-
     var output = "";
-
     for (i = 0; i < INPUTS.length; i++) {
         if (output == ""){
             output = INPUTS[i];
@@ -21,6 +18,11 @@ function addInput() {
         }
     }
     document.getElementById("entry").innerHTML = output;
+}
+
+renderMatrix(){
+    let r = document.getElementById("rows").value;
+    let c = document.getElementById("cols").value;
 }
 
 function reset() {

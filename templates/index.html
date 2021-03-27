@@ -1,6 +1,6 @@
 <!--
 Created as apart of the WinHacks 2021 hackathon! Our submission was for the pattern-completion-app, a challenge
-submitted by Spliced Digital (https://splicedigital.com/)
+submitted by Splice Digital (https://splicedigital.com/)
 
 Project Repo:
 
@@ -28,15 +28,43 @@ Contributors/Team Members:
 </div>
 
 <div>
-    <p>Enter Pattern Details:</p>
+    <!-- User input: columns, rows-->
+    <form>
+        <div id="text-entry">
+            <label for="cols">Columns:</label>
+            <input type="text" id="cols" name="cols">
+        </div>
+        <div id="text-entry">
+            <label for="rows">Rows:</label>
+            <input type="text" id="rows" name="rows">
+        </div>
+        <button type="button" onclick="{{resizeFn(cols.value,rows.value)}}">Set up input</button>
+    </form>
+    <br>
 
-    <!-- User input -->
-    <div id="text-entry">
+    <div class="matrix">
+        {% for y in range(rows) %}
+            <div>
+            {% for x in range(cols) %}
+                <span id="text-entry">
+                    <label>col {{x+1}}, row {{y+1}}:</label>
+                    <!-- ~ tilde acts as a concatenation operator -->
+                    <input type="text" col="{{x}}" row="{{y}}" id="{{x ~ ',' ~ y }}" name="pattern">
+                </span>
+            {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+     <!-- User input: old-->
+     <div id="text-entry">
         <label for="pattern">Entry:</label>
         <input type="text" id="pattern" name="pattern">
         <button type="button" onclick="addInput()" onfocus="this.value=''">Add Entry</button>
         <button type="button" onclick="reset()" onfocus="this.value=''">Reset Entries</button>
+        <button type="button" onclick="{{generateFn(0,0,0,0,0)}}" onfocus="this.value=''">Python?????????????</button>
     </div>
+
     <br>
     <div id="entries">
         <p>Entries: </p>
@@ -44,14 +72,14 @@ Contributors/Team Members:
     </div>
     <br>
     <br>
-    <div>
+    <!-- <div>
         <label for="repetitions">Number of Predictions:</label>
         <input id="repetitions" type="number" min="1" max="10" step="1" value="1" size="4">
-    </div>
+    </div> -->
 
     <!-- button to run -->
     <br><br>
-    <button type="button" onclick="patternTest()">Generator Pattern</button>
+    <button type="button" onclick="patternTest()">Generate Pattern</button>
     <br><br>
     <!-- Output text, set by javascript file -->
     <h4 id="success-alert"></h4>
