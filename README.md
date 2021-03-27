@@ -1,12 +1,15 @@
 # Pattern Completion App <!-- omit in toc -->
 
 - [About](#about)
+  - [Our Team](#our-team)
 - [Contribution Guidelines](#contribution-guidelines)
   - [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
   - [After your Pull Request is Merged](#after-your-pull-request-is-merged)
 - [Coding Rules](#coding-rules)
   - [Code Style](#code-style)
     - [Python](#python)
+    - [HTML/CSS](#htmlcss)
+    - [JavaScript](#javascript)
 - [Commit Message Guidelines](#commit-message-guidelines)
   - [Commit Message Format](#commit-message-format)
   - [Revert](#revert)
@@ -20,6 +23,13 @@
 ## About
 
 This app is a submission for the [WinHacks 2021 competition](https://winhacks-2021.devpost.com/) as challenged by [Splice Digital](https://splicedigital.com/).
+
+### Our Team
+
+- [Alexander Lotz](https://github.com/alexanderlotz/)
+- [Emily Chu](https://github.com/emily-chu)
+- [Ryan Moon](https://github.com/rm00nkh)
+- [Sean Kyer](https://github.com/seankyer)
 
 ## Contribution Guidelines
 
@@ -100,6 +110,14 @@ This project adheres to the [Google Python style guide](https://google.github.io
 
 Linting is performed using [PyLint](https://google.github.io/styleguide/pylintrc) (Link starts a download).
 
+#### HTML/CSS
+
+This project adheres to the [Google HTML/CSS style guide](https://google.github.io/styleguide/htmlcssguide.html).
+
+#### JavaScript
+
+This project adheres to the [Google JavaScript style guide](https://google.github.io/styleguide/jsguide.html).
+
 ## Commit Message Guidelines
 
 Common convention for git commit messages makes it easy to understand the project history and will enable us to easily generate a project change log. This project adheres to the [Conventional Commits style guide](https://www.conventionalcommits.org/en/v1.0.0/). Key information has been included in the below sections for convenience.
@@ -169,3 +187,7 @@ The footer should contain any information about **Breaking Changes** and is also
 This project's completion is largely thanks to information gathered from publicly available resources including, but not limited to:
 
 - [Structured Patterns in Python](https://www.python.org/dev/peps/pep-0636/)
+- [Making Predictions with Sequences](https://machinelearningmastery.com/sequence-prediction/)
+- [Machine Learning - Linear Regression](https://www.w3schools.com/python/python_ml_linear_regression.asp)
+- [Next Word Prediction Model](https://thecleverprogrammer.com/2020/07/20/next-word-prediction-model/)
+- [Understanding Word N-grams in NLP](https://towardsdatascience.com/understanding-word-n-grams-and-n-gram-probability-in-natural-language-processing-9d9eef0fa058)
