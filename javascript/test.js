@@ -1,3 +1,4 @@
+/*
 function patternTest() {
     var inputText = document.getElementById("pattern").value;
     var repetition = document.getElementById("repetitions").value.toString();
@@ -7,3 +8,7 @@ function patternTest() {
     document.getElementById("success-alert").innerHTML = "Output:";
     document.getElementById("output").innerHTML = outString;
 }
+*/
+
+
+

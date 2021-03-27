@@ -1,10 +1,12 @@
 from scipy import stats
+from jsbuilder import js
 
 # Python tester program to take in a pattern
 # and return a prediction of the next n elements
 
 
 # Prompts the user to input a sequence of data and terminates on 'exit'
+@js
 def get_user_pattern():
     inp_list = []
     latest_input = ''
@@ -23,7 +25,7 @@ def lin_reg_nums(inp_list, n):
     for x in range(n):
         print(int(res.intercept + res.slope * (sz + x)))
 
-
+print(get_user_pattern)
 if __name__ == '__main__':
     allNums = True
     seq_list = get_user_pattern()
