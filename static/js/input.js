@@ -10,7 +10,6 @@ function addInput() {
     document.getElementById("pattern").value = "";
 
     INPUTS.push(inputText);
-    console.log(INPUTS.length);
 
     var output = "";
 
@@ -22,6 +21,11 @@ function addInput() {
         }
     }
     document.getElementById("entry").innerHTML = output;
+}
+
+function reset() {
+    INPUTS = [];
+    document.getElementById("entry").innerHTML = "";
 }
 
 function patternTest() {
