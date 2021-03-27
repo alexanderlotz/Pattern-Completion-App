@@ -30,61 +30,43 @@ Contributors/Team Members:
 <div>
     <!-- User input: columns, rows-->
     <form>
-        <div id="text-entry">
+        <div id="col">
             <label for="cols">Columns:</label>
             <input type="text" id="cols" name="cols">
         </div>
-        <div id="text-entry">
+        <div id="row">
             <label for="rows">Rows:</label>
             <input type="text" id="rows" name="rows">
         </div>
-        <button type="button" onclick="{{resizeFn(cols.value,rows.value)}}">Set up input</button>
+        <button type="button" onclick="addRowCol()">Set up input</button>
     </form>
     <br>
 
-    <div class="matrix">
-        {% for y in range(rows) %}
-            <div>
-            {% for x in range(cols) %}
-                <span id="text-entry">
-                    <label>col {{x+1}}, row {{y+1}}:</label>
-                    <!-- ~ tilde acts as a concatenation operator -->
-                    <input type="text" col="{{x}}" row="{{y}}" id="{{x ~ ',' ~ y }}" name="pattern">
-                </span>
-            {% endfor %}
-            </div>
-        {% endfor %}
+    <div id="matrix">
+        <!--rows and columns are added here-->
+    </div>
+    <p id="dimensions-tag"></p>
+    <br>
+
+    <div>
+        <label for="repetitions">Number of Predictions:</label>
+        <input id="repetitions" type="number" min="1" max="10" step="1" value="1" size="4">
     </div>
 
      <!-- User input: old-->
-     <div id="text-entry">
-        <label for="pattern">Entry:</label>
-        <input type="text" id="pattern" name="pattern">
-        <button type="button" onclick="addInput()" onfocus="this.value=''">Add Entry</button>
-        <button type="button" onclick="reset()" onfocus="this.value=''">Reset Entries</button>
-        <button type="button" onclick="{{generateFn(0,0,0,0,0)}}" onfocus="this.value=''">Python?????????????</button>
+    <br>
+     <div id="pattern-entry">
+        <button type="button" onclick="{{generateFn(0,0,0,0,0)}}" onfocus="this.value=''">
+            Predict Pattern, Python!
+        </button>
     </div>
 
-    <br>
-    <div id="entries">
-        <p>Entries: </p>
-        <p id="entry"></p>
-    </div>
-    <br>
-    <br>
-    <!-- <div>
-        <label for="repetitions">Number of Predictions:</label>
-        <input id="repetitions" type="number" min="1" max="10" step="1" value="1" size="4">
-    </div> -->
-
-    <!-- button to run -->
-    <br><br>
-    <button type="button" onclick="patternTest()">Generate Pattern</button>
-    <br><br>
-    <!-- Output text, set by javascript file -->
-    <h4 id="success-alert"></h4>
-
-    <p id="output"></p>
+    <!-- testing http calls to flask -->
+    <form action="http://localhost:5000/test" method="post">
+        <p>Test redirect, POST method</p>
+        <input type = "text" name = "name" />
+        <input type="submit" value="submit">Python Test</input>
+    </form>
 
     <h1 id="pythonOutput"></h1>
 </div>
